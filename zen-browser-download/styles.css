@@ -1,0 +1,211 @@
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background: #000000;
+  margin: 0;
+  min-height: 100vh;
+  color: #222;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to { 
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
+  50% { box-shadow: 0 8px 32px rgba(125,126,246,0.3); }
+  100% { box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+  background: rgba(255,255,255,0.95);
+  margin-top: 60px;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  animation: slideUp 0.8s ease-out;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 300;
+  margin-bottom: 0.5em;
+  color: #574b90;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  animation: slideUp 1s ease-out 0.2s both;
+}
+
+p.center {
+  text-align: center;
+  margin-bottom: 2em;
+  color: #5f5e78;
+  animation: slideUp 1s ease-out 0.4s both;
+}
+
+.downloads {
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  padding: 2em 2em 1.3em;
+  min-width: 230px;
+  max-width: 260px;
+  text-align: center;
+  flex: 1 1 230px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideUp 1s ease-out 0.6s both;
+}
+
+.card:nth-child(1) {
+  animation-delay: 0.6s;
+}
+
+.card:nth-child(2) {
+  animation-delay: 0.8s;
+}
+
+.card:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.card:hover {
+  transform: translateY(-7px) scale(1.03);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+  animation: glow 2s infinite;
+}
+
+.platform-icon {
+  font-size: 2.4em;
+  margin-bottom: 0.4em;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  margin: 0 auto 0.8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+  animation: pulse 2s infinite;
+}
+
+.platform {
+  font-weight: 600;
+  font-size: 1.17em;
+  margin-bottom: 0.5em;
+  color: #5f41cb;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.version {
+  font-size: 0.97em;
+  color: #888;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.download-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 0.8em 1.9em;
+  background: linear-gradient(90deg, #7f7fd5 0%, #86a8e7 60%, #91eac9 100%);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  text-decoration: none;
+  margin-bottom: 0.4em;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.download-btn:hover {
+  background: linear-gradient(90deg, #764ba2 0%, #667eea 80%);
+  transform: translateY(-2px) scale(1.04);
+  animation: pulse 0.5s ease-out;
+}
+
+.alt-link {
+  font-size: 0.95em;
+  color: #6348b5;
+  margin-top: 0.5em;
+  display: block;
+  text-decoration: underline dotted;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.alt-link:hover {
+  color: #37375a;
+  transform: translateY(-1px);
+}
+
+.install-help {
+  margin-top: 2.5em;
+  text-align: center;
+  color: #6b6c8b;
+  font-size: 0.98em;
+  animation: slideUp 1s ease-out 1.2s both;
+}
+
+.install-help a {
+  color: #6d4ed7;
+  text-decoration: underline;
+  margin: 0 0.3em;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.install-help a:hover {
+  color: #37375a;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 750px) {
+  .downloads { 
+    flex-direction: column; 
+    align-items: center; 
+  }
+  .container { 
+    padding: 24px 8px 40px; 
+  }
+}
+
